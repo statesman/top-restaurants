@@ -8,7 +8,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
-$app->get('/hello/{name}/{day}', function($name, $day) use($app) {
+$app->get('/hello/{name}/{day}/', function($name, $day) use($app) {
   $name = strtoupper($name);
 
     return $app['twig']->render('hello.twig', array(
@@ -17,11 +17,11 @@ $app->get('/hello/{name}/{day}', function($name, $day) use($app) {
     ));
 });
 
-$app->get('/hello/wynne', function() use($app) {
+$app->get('/hello/wynne/', function() use($app) {
     return 'Hello, Wynne!';
 });
 
-$app->get('/goodbye/{name}', function($name) use($app) {
+$app->get('/goodbye/{name}/', function($name) use($app) {
     return 'Goodbye ' . $name;
 });
 
