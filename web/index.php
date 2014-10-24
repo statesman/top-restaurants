@@ -8,22 +8,18 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
-$app->get('/hello/{name}/{day}/', function($name, $day) use($app) {
-  $name = strtoupper($name);
+$app->get('/{id}/', function($id) use($app) {
+    $data = file_get_contents(__DIR__."/../data.json");
+    $data = json_decode($data);
 
-    return $app['twig']->render('hello.twig', array(
-        'firstname' => $name,
-        'day' => $day
-    ));
+    return $app['twig']->render('restaurant.twig', (array) $data[$id]);
 });
 
-$app->get('/hello/wynne/', function() use($app) {
-    return 'Hello, Wynne!';
-});
+$app->get('/', function() use($app) {
+    $data = file_get_contents(__DIR__."/../data.json");
+    $data = json_decode($data);
 
-$app->get('/goodbye/{name}/', function($name) use($app) {
-    return 'Goodbye ' . $name;
+    return $app['twig']->render('data.twig', array("data"=>$data));
 });
-
 
 $app->run();
