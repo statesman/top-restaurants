@@ -1,12 +1,60 @@
 {% extends "base.twig" %}
 
+{% block superheader %}
+
+  <div id="slider" class="clearfix">
+
+    <div class="clearfix">
+      <img src="assets/cover/lenoir3.jpg" class="col-xs-2 slider-item" />
+      <img src="assets/cover/uchi6.jpg" class="col-xs-2 slider-item" />
+      <img src="assets/cover/barley2.jpg" class="col-xs-2 slider-item" />
+      <img src="assets/cover/qui2.jpg" class="col-xs-2 slider-item" />
+      <img src="assets/cover/congress2.jpg" class="col-xs-2 slider-item" />
+      <img src="assets/cover/foreign2.jpg" class="col-xs-2 slider-item" />
+    </div>
+
+    <div class="clearfix">
+      <img src="http://placehold.it/480x432" class="col-xs-2 slider-item" />
+      <img src="assets/cover/sway8.jpg" class="col-xs-2 slider-item" />
+      <img src="http://placehold.it/480x432" class="col-xs-2 slider-item" />
+      <img src="assets/cover/wink3.jpg" class="col-xs-2 slider-item" />
+      <img src="assets/cover/justines6.jpg" class="col-xs-2 slider-item" />
+      <img src="assets/cover/parkside1.jpg" class="col-xs-2 slider-item" />
+    </div>
+
+  </div>
+
+{% endblock %}
+
 {% block content %}
 
-  {% for restaurant in data %}
+  <div class="row">
 
-    <a href="{{loop.index0}}"><h3>{{restaurant.name}}</h3></a>
-    <p>{{restaurant.address}}</p>
+    <div class="col-xs-12 col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Map, filters, etc.
+        </div>
+      </div>
+    </div>
 
-  {% endfor %}
+    <div class="col-xs-12 col-md-8">
+
+      <ol>
+
+      {% for restaurant in data %}
+
+        <li>
+          <a href="{{loop.index0}}"><h3>{{restaurant.name}}</h3></a>
+          <p>{{restaurant.address}}</p>
+        </li>
+
+      {% endfor %}
+
+      </ol>
+
+    </div>
+
+  </div>
 
 {% endblock %}
