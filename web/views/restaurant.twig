@@ -1,7 +1,11 @@
-{{name}}
-{{address}}
-{{phone}}
-{{website}}
-{{googlemap}}
-{{review}}
-{{reviewlink}}
+{% extends "base.twig" %}
+
+{% block content %}
+  <h2>{{name}}</h2>
+  <p>{{address}}</p>
+  <p>{{phone}}</p>
+  <p>{{website}}</p>
+  <p>{{googlemap}}</p>
+  <p>{{review}}</p>
+  <p>{{reviewlink}}</p>
+{% endblock %}

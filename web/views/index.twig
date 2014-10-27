@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  {% for restaurant in data %}
+
+    <a href="{{loop.index0}}"><h3>{{restaurant.name}}</h3></a>
+    <p>{{restaurant.address}}</p>
+
+  {% endfor %}
+
+{% endblock %}
