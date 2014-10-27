@@ -1,10 +1,100 @@
-.navbar {
-  margin-bottom: 0;
+@red: #c1272c;
+@black: darken(desaturate(@red, 70%), 30%);
+
+@sans-serif: 'PT Sans', sans-serif;
+@sans-serif-2: 'Titillium Web', sans-serif;
+
+body {
+  background: url("../assets/bg.png");
+  font-family: @sans-serif;
+  font-weight: 300;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-family: @sans-serif-2;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: .6em;
+}
+
+h2 {
+  font-family: @sans-serif-2;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin-top: .4em;
+  margin-bottom: .2em;
+}
+
+h3 {
+ font-family: @sans-serif-2;
+ font-size: 1em;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 1.4em;
+ margin-bottom: .5em;
+}
+
+a {
+  color: @red;
+  &:hover {
+    color: darken(@red, 15%);
+  }
+}
+
+a.read-more {
+  display: inline-block;
+  font-family: @sans-serif;
+  font-weight: 700;
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-left: .2em;
+  position: relative;
+
+  span {
+    position: absolute;
+    font-size: 1.7em;
+    top: -2px;
+    right: -10px;
+  }
+}
+
+p.author {
+  font-family: @sans-serif;
+  font-style: italic;
+}
+
+.number {
+  text-align: center;
+  background: @black;
+  color: white;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  margin-top: 0;
+  padding: 1em 1em;
+  opacity: .9;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.restaurant {
+  margin-bottom: 20px;
+}
+
+.header {
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 #slider {
   margin-bottom: 20px;
   .slider-item {
     padding: 0;
+    position: relative;
+    > img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
