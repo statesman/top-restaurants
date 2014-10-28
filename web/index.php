@@ -30,7 +30,8 @@ $app->get('/{id}/', function($id) use($app) {
       $prev = $data->top[$id - 1];
       $prev->id = $id - 1;
     }
-    elseif($id != count($data->top) - 1) {
+
+    if($id != count($data->top) - 1) {
       $next = $data->top[$id + 1];
       $next->id = $id + 1;
     }
