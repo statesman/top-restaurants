@@ -1,5 +1,6 @@
 [
   {
+    "position": 1,
     "name": "Lenoir",
     "shortdescription": null,
     "address": "1807 S. First St.",
@@ -16,6 +17,7 @@
     "reviewlink": null
   },
   {
+    "position": 2,
     "name": "Qui",
     "shortdescription": null,
     "address": "1600 E. Sixth St.",
@@ -32,6 +34,7 @@
     "reviewlink": null
   },
   {
+    "position": 3,
     "name": "Uchi",
     "shortdescription": null,
     "address": "801 S. Lamar Blvd.",
@@ -48,6 +51,7 @@
     "reviewlink": null
   },
   {
+    "position": 3,
     "name": "Uchiko",
     "shortdescription": null,
     "address": "4200 N. Lamar Blvd.",
@@ -64,6 +68,7 @@
     "reviewlink": null
   },
   {
+    "position": 4,
     "name": "Barley Swine",
     "shortdescription": null,
     "address": "2024 S. Lamar Blvd.",
@@ -80,6 +85,7 @@
     "reviewlink": null
   },
   {
+    "position": 5,
     "name": "Congress",
     "shortdescription": null,
     "address": "200 Congress Ave.",
@@ -96,6 +102,7 @@
     "reviewlink": null
   },
   {
+    "position": 6,
     "name": "Foreign & Domestic",
     "shortdescription": null,
     "address": "306 E. 53rd St. ",
@@ -112,6 +119,7 @@
     "reviewlink": null
   },
   {
+    "position": 7,
     "name": "Bufalina",
     "shortdescription": null,
     "address": "1519 E. Cesar Chavez St.",
@@ -128,6 +136,7 @@
     "reviewlink": null
   },
   {
+    "position": 8,
     "name": "Sway",
     "shortdescription": null,
     "address": "1417 S. First St.",
@@ -144,6 +153,7 @@
     "reviewlink": null
   },
   {
+    "position": 9,
     "name": "LaV",
     "shortdescription": null,
     "address": "1501 E. Seventh St.",
@@ -160,6 +170,7 @@
     "reviewlink": null
   },
   {
+    "position": 10,
     "name": "Wink",
     "shortdescription": null,
     "address": "1014 N. Lamar Blvd.",
@@ -176,6 +187,7 @@
     "reviewlink": null
   },
   {
+    "position": 11,
     "name": "Justine's",
     "shortdescription": null,
     "address": "4710 E. Fifth St. ",
@@ -192,6 +204,7 @@
     "reviewlink": null
   },
   {
+    "position": 12,
     "name": "Parkside",
     "shortdescription": null,
     "address": "301 E. Sixth St. ",
@@ -208,6 +221,7 @@
     "reviewlink": null
   },
   {
+    "position": 13,
     "name": "Franklin Barbecue",
     "shortdescription": null,
     "address": "900 E. 11th St. ",
@@ -224,6 +238,7 @@
     "reviewlink": null
   },
   {
+    "position": 14,
     "name": "Odd Duck",
     "shortdescription": null,
     "address": "1201 S. Lamar Blvd.",
@@ -240,6 +255,7 @@
     "reviewlink": null
   },
   {
+    "position": 15,
     "name": "Jeffrey's",
     "shortdescription": null,
     "address": "1204 W. Lynn St.",
@@ -256,6 +272,7 @@
     "reviewlink": null
   },
   {
+    "position": 16,
     "name": "Second Bar + Kitchen",
     "shortdescription": null,
     "address": "200 Congress Ave.",
@@ -272,6 +289,7 @@
     "reviewlink": null
   },
   {
+    "position": 17,
     "name": "Blackbird & Henry",
     "shortdescription": null,
     "address": "3016 Guadalupe St. ",
@@ -288,6 +306,7 @@
     "reviewlink": null
   },
   {
+    "position": 18,
     "name": "Caf\u00e9 Josie",
     "shortdescription": null,
     "address": "1200 W. Sixth St.",
@@ -304,6 +323,7 @@
     "reviewlink": null
   },
   {
+    "position": 19,
     "name": "Fabi & Rosi",
     "shortdescription": null,
     "address": "509 Hearn St.",
@@ -320,6 +340,7 @@
     "reviewlink": null
   },
   {
+    "position": 20,
     "name": "Perla's Seafood and Oyster Bar",
     "shortdescription": null,
     "address": "1400 S. Congress Ave.",
@@ -336,6 +357,7 @@
     "reviewlink": null
   },
   {
+    "position": 21,
     "name": "La Traviata",
     "shortdescription": null,
     "address": "314 Congress Ave.",
@@ -352,6 +374,7 @@
     "reviewlink": null
   },
   {
+    "position": 22,
     "name": "El Naranjo",
     "shortdescription": null,
     "address": "85 Rainey St.",
@@ -368,6 +391,7 @@
     "reviewlink": null
   },
   {
+    "position": 23,
     "name": "La Condesa",
     "shortdescription": null,
     "address": "400 W. Second St.",
@@ -384,6 +408,7 @@
     "reviewlink": null
   },
   {
+    "position": 24,
     "name": "Tam Deli",
     "shortdescription": null,
     "address": "8222 N. Lamar Blvd.",
@@ -400,6 +425,7 @@
     "reviewlink": null
   },
   {
+    "position": 25,
     "name": "Swift's Attic",
     "shortdescription": null,
     "address": "315 Congress Ave.",

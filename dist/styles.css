@@ -1434,11 +1434,19 @@ p.author {
   opacity: .9;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
+/* Mobile restaurnat list */
 .restaurant {
   margin-bottom: 20px;
 }
+.restaurant h2 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  margin-top: 0;
+}
 .restaurant .img-wrapper {
   position: relative;
+  padding-right: 0;
 }
 .restaurant .img-wrapper .number {
   left: 25px;
@@ -1462,7 +1470,7 @@ p.author {
   width: 280px;
   float: left;
 }
-#slider .slider-item > img {
+#slider .slider-item img {
   width: 100%;
   height: auto;
 }
