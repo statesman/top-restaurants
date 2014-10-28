@@ -6,6 +6,8 @@ $app = new Silex\Application();
 
 $app['debug'] = TRUE;
 
+$app['resourceurl'] = '/';
+
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
@@ -13,6 +15,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->get('/{id}/', function($id) use($app) {
     $data = file_get_contents(__DIR__."/../data.json");
     $data = json_decode($data);
+    $data->resourceurl = $app['resourceurl'];
 
     return $app['twig']->render('restaurant.twig', (array) $data[$id]);
 });
@@ -20,8 +23,9 @@ $app->get('/{id}/', function($id) use($app) {
 $app->get('/', function() use($app) {
     $data = file_get_contents(__DIR__."/../data.json");
     $data = json_decode($data);
+    $data->resourceurl = $app['resourceurl'];
 
-    return $app['twig']->render('index.twig', array("data" => $data));
+    return $app['twig']->render('index.twig', (array) $data);
 });
 
 $app->run();

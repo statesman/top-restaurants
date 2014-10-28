@@ -1,5 +1,5 @@
-[
-  {
+{
+  "top": [{
     "position": 1,
     "name": "Lenoir",
     "shortdescription": null,
@@ -15,8 +15,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 2,
     "name": "Qui",
     "shortdescription": null,
@@ -32,8 +31,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 3,
     "name": "Uchi",
     "shortdescription": null,
@@ -49,8 +47,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 3,
     "name": "Uchiko",
     "shortdescription": null,
@@ -66,8 +63,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 4,
     "name": "Barley Swine",
     "shortdescription": null,
@@ -83,8 +79,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 5,
     "name": "Congress",
     "shortdescription": null,
@@ -100,8 +95,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 6,
     "name": "Foreign & Domestic",
     "shortdescription": null,
@@ -117,8 +111,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 7,
     "name": "Bufalina",
     "shortdescription": null,
@@ -134,8 +127,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 8,
     "name": "Sway",
     "shortdescription": null,
@@ -151,8 +143,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 9,
     "name": "LaV",
     "shortdescription": null,
@@ -168,8 +159,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 10,
     "name": "Wink",
     "shortdescription": null,
@@ -185,8 +175,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 11,
     "name": "Justine's",
     "shortdescription": null,
@@ -202,8 +191,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 12,
     "name": "Parkside",
     "shortdescription": null,
@@ -219,8 +207,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 13,
     "name": "Franklin Barbecue",
     "shortdescription": null,
@@ -236,8 +223,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 14,
     "name": "Odd Duck",
     "shortdescription": null,
@@ -253,8 +239,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 15,
     "name": "Jeffrey's",
     "shortdescription": null,
@@ -270,8 +255,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 16,
     "name": "Second Bar + Kitchen",
     "shortdescription": null,
@@ -287,8 +271,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 17,
     "name": "Blackbird & Henry",
     "shortdescription": null,
@@ -304,8 +287,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 18,
     "name": "Caf\u00e9 Josie",
     "shortdescription": null,
@@ -321,8 +303,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 19,
     "name": "Fabi & Rosi",
     "shortdescription": null,
@@ -338,8 +319,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 20,
     "name": "Perla's Seafood and Oyster Bar",
     "shortdescription": null,
@@ -355,8 +335,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 21,
     "name": "La Traviata",
     "shortdescription": null,
@@ -372,8 +351,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 22,
     "name": "El Naranjo",
     "shortdescription": null,
@@ -389,8 +367,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 23,
     "name": "La Condesa",
     "shortdescription": null,
@@ -406,8 +383,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 24,
     "name": "Tam Deli",
     "shortdescription": null,
@@ -423,8 +399,7 @@
     "cost": null,
     "review": null,
     "reviewlink": null
-  },
-  {
+  }, {
     "position": 25,
     "name": "Swift's Attic",
     "shortdescription": null,
@@ -440,5 +415,189 @@
     "cost": null,
     "review": null,
     "reviewlink": null
+  }],
+  "picks": {
+    "barbecue": [{
+      "name": "La Barbecue",
+      "multiple": null,
+      "address": "1200 E. Sixth St.",
+      "phone": "512-605-9696",
+      "website": "labarbecue.com",
+      "chatter": "The best barbecue in Austin. Start with the brisket and go from there."
+    }, {
+      "name": "J. Mueller Meat Co.",
+      "multiple": null,
+      "address": "2500 E. Sixth St.",
+      "phone": "",
+      "website": "johnmuellermeatco.com",
+      "chatter": "Old-school barbecue cook John Mueller’s brisket bark is as fierce as his half-joking snarl."
+    }, {
+      "name": "Micklethwait Craft Meats",
+      "multiple": null,
+      "address": "1309 Rosewood Ave.",
+      "phone": "512-791-5961",
+      "website": "craftmeats.com",
+      "chatter": "Tom Micklethwait’s East Austin trailer specializes in inventive and flavorful sausage and makes surprisingly good desserts."
+    }, {
+      "name": "Brown’s Bar-B-Que",
+      "multiple": null,
+      "address": "1901 S. Lamar Blvd.",
+      "phone": "512-517-8520",
+      "website": "facebook.com/brownsbarbque",
+      "chatter": "This South Lamar trailer smokes some of the best chicken and pork ribs in town."
+    }, {
+      "name": "Kerlin BBQ",
+      "multiple": null,
+      "address": "1700 E. Cesar Chavez St.",
+      "phone": "512-412-5588",
+      "website": "kerlinbbq.com",
+      "chatter": "This trailer serves solid brisket and a nice blue cheese-twist on cole slaw."
+    }, {
+      "name": "Freedmen’s",
+      "multiple": null,
+      "address": "2402 San Gabriel St.",
+      "phone": "512-220-0953",
+      "website": "freedmensbar.com",
+      "chatter": "With a historic old building, handsome bar and outdoor courtyard, this is the best restaurant space for barbecue in Austin."
+    }],
+    "breakfast": [{
+      "name": "Counter Café",
+      "multiple": "",
+      "address": "626 N. Lamar Blvd.",
+      "phone": "512-708-8800",
+      "website": "countercafe.com",
+      "chatter": "The cakes-and-eggs dish at this diner uses crab cakes for a refreshing alternative to traditional breakfast fare."
+    }, {
+      "name": "Kerbey Lane",
+      "multiple": "Yes",
+      "address": "",
+      "phone": "512-447-3767",
+      "website": "kerbeylanecafe.com",
+      "chatter": "An Austin original that has been interested in conscientious sourcing since before it was popular."
+    }, {
+      "name": "Magnolia Cafe",
+      "multiple": "Yes",
+      "address": "",
+      "phone": "512-445-0000",
+      "website": "themagnoliacafe.com",
+      "chatter": "Funky and fun, this place is a testament to the fact that pancakes and omelets taste good any time of the day or night."
+    }],
+    "burgers": [{
+      "name": "Casino El Camino",
+      "multiple": "",
+      "address": "517 E. Sixth St.",
+      "phone": "512-469-9330",
+      "website": "casinoelcamino.net",
+      "chatter": "This dark Sixth Street bar with rock ‘n’ roll grills fat, juicy burgers."
+    }, {
+      "name": "Crown and Anchor",
+      "multiple": "",
+      "address": "2911 San Jacinto Blvd.",
+      "phone": "512-322-9168",
+      "website": "crownandanchorpub.com",
+      "chatter": "Make sure you order a double (add bacon) from this campus-area stalwart."
+    }, {
+      "name": "Hopdoddy",
+      "multiple": "Yes",
+      "address": "1400 S. Congress Ave.",
+      "phone": "512-243-7505",
+      "website": "hopdoddy.com",
+      "chatter": "Quality ingredients and thoughtful flavor profiles make for long lines at the two Austin locations."
+    }, {
+      "name": "Hopfields",
+      "multiple": "",
+      "address": "3110 Guadalupe St.",
+      "phone": "512-537-0467",
+      "website": "hopfieldsaustin.com",
+      "chatter": "Funky Camembert cheese tops the juicy burger at this French-inspired gastropub that has an excellent beer selection."
+    }, {
+      "name": "P. Terry’s",
+      "multiple": "Yes",
+      "address": "",
+      "phone": "",
+      "website": "",
+      "chatter": "Patrick Terry has created a mini-empire with his retro burger restaurants thanks to good ingredients, friendly service and competitive prices. Better than In-N-Out Burger. Period."
+    }, {
+      "name": "Top Notch Hamburgers",
+      "multiple": "",
+      "address": "7525 Burnet Road",
+      "phone": "512-452-2181",
+      "website": "TopNotchAustin.com",
+      "chatter": "New ownership was wise not to change the aesthetics at this classic car-hop spot that was featured in “Dazed and Confused.” A charcoal grill gives the burgers a nostalgic backyard-burger flavor."
+    }],
+    "chinese": [{
+      "name": "Rice Bowl Café",
+      "multiple": null,
+      "address": "11220 N. Lamar Blvd.",
+      "phone": "512-835-8888",
+      "website": "ricebowlcafeaustin.com",
+      "chatter": "From the pan-fried green onion pancakes to springy salt-and-pepper squid, it’s hard to go wrong at this Chinese restaurant."
+    }, {
+      "name": "Szechuan House",
+      "multiple": null,
+      "address": "11005 Burnet Road",
+      "phone": "512-832-8989",
+      "website": "szechuanhouseaustin.com",
+      "chatter": "Ignore the Americanized offerings and head for the Szechuan specialties like wonton in red oil and spicy fish. The lamb with cumin will taste familiar to fans of Mexican food."
+    }],
+    "french": [{
+      "name": "Arro",
+      "multiple": null,
+      "address": "601 W. Sixth St.",
+      "phone": "512-992-2776",
+      "website": "arroaustin.com",
+      "chatter": "French bistro classics like roasted duck and pan-seared frog legs in brown butter at this hip restaurant that has a great wine list."
+    }, {
+      "name": "Chez Nous",
+      "multiple": null,
+      "address": "510 Neches St.",
+      "phone": "512-473-2413",
+      "website": "cheznousaustin.com",
+      "chatter": "Rich dishes like duck with apricot compote and trout meunière make up the heart of the menu at this retreat from the Sixth Street madness."
+    }],
+    "friedchicken": [{
+      "name": "Gus’s Fried Chicken",
+      "multiple": "",
+      "address": "117 San Jacinto Blvd.",
+      "phone": "512-474-4877",
+      "website": "gusfriedchicken.com",
+      "chatter": "The star here is in the name – crunchy and tender fried chicken with a little spice kick."
+    }, {
+      "name": "Lucy's",
+      "multiple": "Yes",
+      "address": "2218 College Ave.",
+      "phone": "512-297-2423",
+      "website": "LucysFriedChicken.com",
+      "chatter": "In addition to solid fried chicken, try the grilled oysters and boudin blanc."
+    }],
+    "hotels": [{
+      "name": "The Carillon",
+      "multiple": null,
+      "address": "1900 University Ave.",
+      "phone": "512-404-3655",
+      "website": "TheCarillonRestaurant.com",
+      "chatter": "One of the city’s most underrated restaurants serves New American cuisine, from seared scallops to grilled quail. It also offers good value, with four-course dinners for $50."
+    }, {
+      "name": "Driskill Grill",
+      "multiple": null,
+      "address": "604 Brazos St.",
+      "phone": "512-391-7162",
+      "website": "DriskillGrill.com",
+      "chatter": "A throwback piece of Austin dining culture that too often goes overlooked."
+    }, {
+      "name": "Trace",
+      "multiple": null,
+      "address": "200 Lavaca St.",
+      "phone": "512-542-3660",
+      "website": "TraceAustin.com",
+      "chatter": "Trace does an admirable job battling the stereotypes that often come with being a hotel restaurant. Service is polite and measured in the mod space colored with shades of black and white, and the menu is always fresh and engaging."
+    }, {
+      "name": "Trio at the Four Seasons",
+      "multiple": null,
+      "address": "98 San Jacinto Blvd.",
+      "phone": "512-685-8300",
+      "website": "TrioRestaurantAustin.com",
+      "chatter": "You needn’t check into a room at the Four Seasons to be treated like a VIP at Trio. The accommodating and exceedingly polite staff anticipates your needs in guiding you through the restaurant’s steak-centric menu and wine list, composed by sommelier Mark Sayre, one of Trio’s finest ambassadors."
+    }]
   }
-]
+}

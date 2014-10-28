@@ -11,7 +11,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/styles.css">
+    <link rel="stylesheet" href="{{resourceurl}}dist/styles.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +23,7 @@
   <body>
 
     <div class="header col-xs-12">
-      <img class="center-block img-responsive" src="assets/360logo.png" />
+      <img class="center-block img-responsive" src="{{resourceurl}}assets/360logo.png" />
     </div>
 
     {% block superheader %}{% endblock %}
@@ -36,6 +36,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="{{resourceurl}}bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <script>
+    $(function() {
+      var $container = $('#picks');
+      // initialize
+      $container.masonry({
+        itemSelector: '.pick'
+      });
+    });
+    </script>
 
     <script src="//localhost:35729/livereload.js"></script>
   </body>

@@ -1451,6 +1451,35 @@ p.author {
 .restaurant .img-wrapper .number {
   left: 25px;
 }
+#picks {
+  margin-top: 25px;
+}
+#picks .pick .panel-default {
+  background: #f7f7f7;
+  border-color: #282828;
+  border-width: 1px;
+  border-radius: 0;
+}
+#picks .pick .panel-default .panel-heading {
+  color: white;
+  background-color: #c1272c;
+  border-radius: 0;
+}
+#picks .pick .panel-default .panel-heading h3 {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+#picks .restaurant {
+  margin-bottom: 2px;
+  font-size: .95em;
+}
+#picks .restaurant strong {
+  font-size: 1.1em;
+}
+#picks .chatter {
+  font-size: .9em;
+}
 .header {
   margin-top: 20px;
   margin-bottom: 30px;
