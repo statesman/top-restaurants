@@ -13,7 +13,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app->get('/{id}/', function($id) use($app) {
-    $data = file_get_contents(__DIR__."/../data.json");
+    $data = file_get_contents(__DIR__."/../data/data.json");
     $data = json_decode($data);
     $data->resourceurl = $app['resourceurl'];
 
@@ -21,7 +21,7 @@ $app->get('/{id}/', function($id) use($app) {
 });
 
 $app->get('/', function() use($app) {
-    $data = file_get_contents(__DIR__."/../data.json");
+    $data = file_get_contents(__DIR__."/../data/data.json");
     $data = json_decode($data);
     $data->resourceurl = $app['resourceurl'];
 
