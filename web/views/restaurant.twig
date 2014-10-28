@@ -1,11 +1,41 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <h2>{{name}}</h2>
-  <p>{{address}}</p>
-  <p>{{phone}}</p>
-  <p>{{website}}</p>
-  <p>{{googlemap}}</p>
-  <p>{{review}}</p>
-  <p>{{reviewlink}}</p>
+  {% if previous %}
+    <div class="restaurant-arrow restaurant-prev">
+      <a href="../{{previous.id}}">
+        <span class="typcn typcn-chevron-left"></span>
+        <p><strong>No. {{previous.position}}</strong></p>
+        <p>{{previous.name}}</p>
+      </a>
+    </div>
+  {% endif %}
+  {% if next %}
+    <div class="restaurant-arrow restaurant-next">
+      <a href="../{{next.id}}">
+        <span class="typcn typcn-chevron-right"></span>
+        <p><strong>No. {{next.position}}</strong></p>
+        <p>{{next.name}}</p>
+      </a>
+    </div>
+  {% endif %}
+  <div class="row restaurant-page">
+    <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10">
+      <img class="img-responsive" src="{{resourceurl}}assets/inside/{{current.insideImg}}" />
+    </div>
+    <div class="contact col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+      <p><span class="typcn typcn-phone"></span> {{current.phone}}</p>
+      <hr />
+      <p><span class="typcn typcn-link"></span> <a href="http://{{current.website}}" target="_blank">{{current.website}}</a></p>
+      <hr />
+      <p><span class="typcn typcn-location-outline"></span> {{current.address}}, Austin, TX {{current.zip}}</p>
+    </div>
+    <div class="col-xs-12 col-sm-7 col-md-6">
+      <h2 class="name"><span class="pos">#{{current.position}}</span><span class="separator">:</span> {{current.name}}</h2>
+      <div class="review">
+        {{current.review|raw}}
+        <p><em>- Matthew Odam</em></p>
+      </div>
+    </div>
+  </div>
 {% endblock %}

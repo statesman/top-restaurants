@@ -184,3 +184,80 @@ p.author {
 span[class*="typcn-social-"] {
   font-size:21px;
 }
+
+.restaurant-page {
+  background: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  h2.name {
+    font-size: 3.5em;
+    font-weight: 900;
+    .pos {
+      font-weight: 600;
+      color: @red;
+    }
+    .separator {
+      color: fade(@black, 20%);
+      font-weight: 400;
+    }
+  }
+  .review {
+    p:first-child {
+      font-size: 1.25em;
+    }
+    font-size: 1.05em;
+  }
+  .contact {
+    margin-top: 105px;
+    hr {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.restaurant-arrow {
+  position: fixed;
+  top: 50%;
+  margin-top: -40px;
+  max-width: 85px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  &.restaurant-prev {
+    left: 10px;
+    p {
+      margin-left: 15px;
+    }
+  }
+  &.restaurant-next {
+    right: 10px;
+    text-align: right;
+    p {
+      margin-right: 15px;
+    }
+  }
+   span {
+    font-size: 60px;
+    line-height: 65px;
+    color: @red;
+  }
+  p {
+    opacity: .5;
+    margin: 0;
+    color: @black;
+    > strong {
+      font-size: 1.4em;
+    }
+  }
+  &:hover {
+     p {
+      opacity: 1;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  @media (max-width: 925px) {
+    display: none;
+  }
+}

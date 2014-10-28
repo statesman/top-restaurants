@@ -1529,3 +1529,78 @@ p.author {
 span[class*="typcn-social-"] {
   font-size: 21px;
 }
+.restaurant-page {
+  background: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.restaurant-page h2.name {
+  font-size: 3.5em;
+  font-weight: 900;
+}
+.restaurant-page h2.name .pos {
+  font-weight: 600;
+  color: #c1272c;
+}
+.restaurant-page h2.name .separator {
+  color: rgba(40, 40, 40, 0.2);
+  font-weight: 400;
+}
+.restaurant-page .review {
+  font-size: 1.05em;
+}
+.restaurant-page .review p:first-child {
+  font-size: 1.25em;
+}
+.restaurant-page .contact {
+  margin-top: 105px;
+}
+.restaurant-page .contact hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.restaurant-arrow {
+  position: fixed;
+  top: 50%;
+  margin-top: -40px;
+  max-width: 85px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.restaurant-arrow.restaurant-prev {
+  left: 10px;
+}
+.restaurant-arrow.restaurant-prev p {
+  margin-left: 15px;
+}
+.restaurant-arrow.restaurant-next {
+  right: 10px;
+  text-align: right;
+}
+.restaurant-arrow.restaurant-next p {
+  margin-right: 15px;
+}
+.restaurant-arrow span {
+  font-size: 60px;
+  line-height: 65px;
+  color: #c1272c;
+}
+.restaurant-arrow p {
+  opacity: .5;
+  margin: 0;
+  color: #282828;
+}
+.restaurant-arrow p > strong {
+  font-size: 1.4em;
+}
+.restaurant-arrow:hover p {
+  opacity: 1;
+}
+.restaurant-arrow:hover a {
+  text-decoration: none;
+}
+@media (max-width: 925px) {
+  .restaurant-arrow {
+    display: none;
+  }
+}
