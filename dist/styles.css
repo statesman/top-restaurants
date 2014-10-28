@@ -1458,3 +1458,12 @@ p.author {
   width: 100%;
   height: auto;
 }
+.social-share {
+  margin-top: -7px;
+}
+.social-share li {
+  padding: 0;
+}
+span[class*="typcn-social-"] {
+  font-size: 21px;
+}
