@@ -9,8 +9,25 @@ module.exports = function(grunt) {
     less: {
       all: {
         files: {
-          "dist/styles.css": "src/css/app.less"
+          "dist/styles.css": [
+            "src/css/typicons.less",
+            "src/css/app.less"
+          ]
         }
+      }
+    },
+
+    copy: {
+      typicons: {
+        files: [
+          // Icon font files
+          {
+            expand: true,
+            flatten: true,
+            src: 'bower_components/typicons/src/font/typicons.**',
+            dest: 'font/'
+          }
+        ]
       }
     },
 
@@ -33,5 +50,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
 };
