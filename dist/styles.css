@@ -1451,7 +1451,7 @@ p.author {
   margin-bottom: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
-  height: 504px;
+  height: 521px;
 }
 #slider .slider-carousel {
   width: 3640px;
@@ -1465,6 +1465,23 @@ p.author {
 #slider .slider-item > img {
   width: 100%;
   height: auto;
+}
+#slider .slider-item .name {
+  position: absolute;
+  color: white;
+  bottom: 2px;
+  left: 11px;
+  max-width: 60%;
+  font-weight: 900;
+  line-height: 28px;
+  text-shadow: 0 0 8px #282828;
+  padding: 6px 12px;
+  display: inline;
+  letter-spacing: .75px;
+  background-color: rgba(193, 39, 44, 0.6);
+}
+#slider .slider-item:hover .name {
+  background-color: #c1272c;
 }
 .social-share {
   margin-top: -7px;

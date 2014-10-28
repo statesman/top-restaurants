@@ -100,7 +100,7 @@ p.author {
   margin-bottom: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
-  height: @item-height * 2;
+  height: @item-height * 2 + 17px;
   .slider-carousel {
     width: @item-width * 13;
   }
@@ -112,6 +112,25 @@ p.author {
     > img {
       width: 100%;
       height: auto;
+    }
+    .name {
+      position: absolute;
+      color: white;
+      bottom: 2px;
+      left: 11px;
+      max-width: 60%;
+      font-weight: 900;
+      line-height: 28px;
+      text-shadow: 0 0 8px @black;
+      padding: 6px 12px;
+      display: inline;
+      letter-spacing: .75px;
+      background-color: fade(@red, 60%);
+    }
+    &:hover {
+      .name {
+        background-color: @red;
+      }
     }
   }
 }

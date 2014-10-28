@@ -23,6 +23,7 @@
           {% if loop.index is odd %}
             <div class="slider-item">
               <h3 class="number">{{loop.index}}</h3>
+              <h2 class="name">{{restaurant.name}}</h2>
               <img src="assets/cover/{{restaurant.coverimg}}" />
             </div>
           {% endif %}
@@ -33,6 +34,7 @@
           {% if loop.index is even %}
             <div class="slider-item">
               <h3 class="number">{{loop.index}}</h3>
+              <h2 class="name">{{restaurant.name}}</h2>
               <img src="assets/cover/{{restaurant.coverimg}}" />
             </div>
           {% endif %}
