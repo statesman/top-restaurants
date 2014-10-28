@@ -21,7 +21,7 @@ $app->get('/', function() use($app) {
     $data = file_get_contents(__DIR__."/../data.json");
     $data = json_decode($data);
 
-    return $app['twig']->render('index.twig', array("data"=>$data));
+    return $app['twig']->render('index.twig', array("data" => $data));
 });
 
 $app->run();

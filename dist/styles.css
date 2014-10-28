@@ -1449,10 +1449,18 @@ p.author {
 }
 #slider {
   margin-bottom: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 504px;
+}
+#slider .slider-carousel {
+  width: 3640px;
 }
 #slider .slider-item {
   padding: 0;
   position: relative;
+  width: 280px;
+  float: left;
 }
 #slider .slider-item > img {
   width: 100%;

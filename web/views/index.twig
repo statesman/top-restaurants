@@ -16,53 +16,30 @@
     </div>
   </div>
 
-  <div id="slider" class="clearfix">
-
-    <div class="clearfix">
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <h3 class="number">1</h3>
-        <img src="assets/cover/lenoir3.jpg" />
+  <div id="slider" class="clearfix hidden-xs">
+    <div class="slider-carousel clearfix">
+      <div class="clearfix">
+        {% for restaurant in data %}
+          {% if loop.index is odd %}
+            <div class="slider-item">
+              <h3 class="number">{{loop.index}}</h3>
+              <img src="assets/cover/{{restaurant.coverimg}}" />
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/uchi6.jpg" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/barley2.jpg" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/qui2.jpg" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/congress2.jpg" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/foreign2.jpg" />
-      </div>
-    </div>
-
-    <div class="clearfix">
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="http://placehold.it/480x432" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/sway8.jpg" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="http://placehold.it/480x432" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/wink3.jpg" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/justines6.jpg" />
-      </div>
-      <div class="hidden-xs col-sm-3 col-md-2 slider-item">
-        <img src="assets/cover/parkside1.jpg" />
+      <div class="clearfix">
+        {% for restaurant in data %}
+          {% if loop.index is even %}
+            <div class="slider-item">
+              <h3 class="number">{{loop.index}}</h3>
+              <img src="assets/cover/{{restaurant.coverimg}}" />
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
-
   </div>
-
 {% endblock %}
 
 {% block content %}
@@ -84,7 +61,7 @@
         <div class="restaurant row">
           <div class="col-xs-2 col-sm-3 img-wrapper">
             <h3 class="number">{{loop.index}}</h3>
-            <img class="img-responsive" src="assets/cover/lenoir3.jpg" />
+            <img class="img-responsive" src="assets/cover/{{restaurant.coverimg}}" />
           </div>
           <div class="col-xs-10 col-sm-9">
             <a href="{{loop.index0}}"><h2>{{restaurant.name}}</h2></a>
