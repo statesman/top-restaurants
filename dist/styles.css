@@ -1536,6 +1536,8 @@ span[class*="typcn-social-"] {
 }
 .restaurant-page h2.name {
   font-size: 3.5em;
+  line-height: 1em;
+  margin-bottom: 18px;
   font-weight: 900;
 }
 .restaurant-page h2.name .pos {
@@ -1553,7 +1555,8 @@ span[class*="typcn-social-"] {
   font-size: 1.25em;
 }
 .restaurant-page .contact {
-  margin-top: 105px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .restaurant-page .contact hr {
   margin-top: 5px;
