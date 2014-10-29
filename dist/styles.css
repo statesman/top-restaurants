@@ -1483,6 +1483,38 @@ p.author {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+.intro {
+  margin-top: 15px;
+  padding: 20px 35px;
+  margin-bottom: 75px;
+  background-color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.intro h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.intro h2 {
+  margin-top: 0;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.intro p {
+  font-size: 1.15em;
+}
+.intro .scroll-down {
+  color: #c1272c;
+  text-align: center;
+  margin-top: 75px;
+}
+.intro .scroll-down > span {
+  font-size: 75px;
+  line-height: 30px;
+}
 #slider {
   margin-bottom: 20px;
   overflow-x: scroll;
@@ -1536,6 +1568,8 @@ span[class*="typcn-social-"] {
 }
 .restaurant-page h2.name {
   font-size: 3.5em;
+  line-height: 1em;
+  margin-bottom: 18px;
   font-weight: 900;
 }
 .restaurant-page h2.name .pos {
@@ -1553,7 +1587,8 @@ span[class*="typcn-social-"] {
   font-size: 1.25em;
 }
 .restaurant-page .contact {
-  margin-top: 105px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .restaurant-page .contact hr {
   margin-top: 5px;

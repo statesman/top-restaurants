@@ -23,6 +23,9 @@
     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10">
       <img class="img-responsive" src="{{resourceurl}}assets/inside/{{current.insideImg}}" />
     </div>
+    <div class="col-xs-12 col-sm-7 col-sm-offset-4 col-md-6">
+      <h2 class="name"><span class="pos">#{{current.position}}</span><span class="separator">:</span> {{current.name}}</h2>
+    </div>
     <div class="contact col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
       <p><span class="typcn typcn-phone"></span> {{current.phone}}</p>
       <hr />
@@ -31,7 +34,6 @@
       <p><span class="typcn typcn-location-outline"></span> {{current.address}}, Austin, TX {{current.zip}}</p>
     </div>
     <div class="col-xs-12 col-sm-7 col-md-6">
-      <h2 class="name"><span class="pos">#{{current.position}}</span><span class="separator">:</span> {{current.name}}</h2>
       <div class="review">
         {{current.review|raw}}
         <p><em>- Matthew Odam</em></p>
