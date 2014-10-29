@@ -23,8 +23,6 @@
     var headerHeight = $('.header').outerHeight();
     var winHeight = $(window).height();
     $('#map').height(winHeight - headerHeight - 50);
-    console.log(headerHeight);
-    console.log(winHeight);
   });
   </script>
   <script>
@@ -39,7 +37,10 @@
       markers.push({
         lat: {{location.lat}},
         lng: {{location.long}},
-        title: '{{location.name}}'
+        icon: '{{resourceurl}}assets/markers/{{location.position}}.png',
+        infoWindow: {
+          content: '<h3 style="overflow:hidden;margin:0;min-width:95px;">{{location.name}}</h3>'
+        }
       });
     {% endfor %}
     map.addMarkers(markers);
