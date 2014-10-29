@@ -4,25 +4,26 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
-$app['debug'] = TRUE;
-
-$app['resourceurl'] = '/';
-
+// Twig to render responses
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/views',
+    'twig.path' => __DIR__.'/views'
 ));
 
-$app->get('/map/', function() use($app) {
+// ConfigServiceProvider for environment settings
+$app->register(new Igorw\Silex\ConfigServiceProvider(__DIR__.'/env.json'));
+
+// Routes ...
+$app->get($app['urlprefix'].'map/', function() use($app) {
   $data = file_get_contents(__DIR__."/../data/data.json");
   $data = json_decode($data);
 
   return $app['twig']->render('map.twig', array(
-    'resourceurl' => $app['resourceurl'],
+    'resourceurl' => $app['urlprefix'],
     'locations' => (array) $data->top
   ));
 });
 
-$app->get('/{id}/', function($id) use($app) {
+$app->get($app['urlprefix'].'{id}/', function($id) use($app) {
     $data = file_get_contents(__DIR__."/../data/data.json");
     $data = json_decode($data);
 
@@ -37,17 +38,17 @@ $app->get('/{id}/', function($id) use($app) {
     }
 
     return $app['twig']->render('restaurant.twig', array(
-      'resourceurl' => $app['resourceurl'],
+      'resourceurl' => $app['urlprefix'],
       'previous' => $prev,
       'current' => $data->top[$id],
       'next' => $next
     ));
 });
 
-$app->get('/', function() use($app) {
+$app->get($app['urlprefix'], function() use($app) {
     $data = file_get_contents(__DIR__."/../data/data.json");
     $data = json_decode($data);
-    $data->resourceurl = $app['resourceurl'];
+    $data->resourceurl = $app['urlprefix'];
 
     return $app['twig']->render('index.twig', (array) $data);
 });
