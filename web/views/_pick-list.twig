@@ -5,7 +5,7 @@
     </div>
     <div class="panel-body">
       {% for restaurant in picks %}
-        <p class="restaurant"><strong>{{restaurant.name}}</strong> {{restaurant.address}}, {{restaurant.phone}}, <a target="_blank" href="http://{{restaurant.website}}">{{restaurant.website}}</a></p>
+        <p class="restaurant"><strong>{{restaurant.name}}</strong> {%if restaurant.multiple %}Multiple locations, {% endif %}{% if restaurant.address %}{{restaurant.address}}, {% endif %}{% if restaurant.phone %}{{restaurant.phone}}, {% endif %}{% if restaurant.website %}<a target="_blank" href="http://{{restaurant.website}}">{{restaurant.website}}</a>{% endif %}</p>
         <p class="chatter"><em>"{{restaurant.chatter}}"</em></p>
       {% endfor %}
     </div>
