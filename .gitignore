@@ -1,3 +1,4 @@
 vendor
 node_modules
 data/creds.cfg
+web/env.json
