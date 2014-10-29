@@ -1486,7 +1486,7 @@ p.author {
 .intro {
   margin-top: 15px;
   padding: 20px 35px;
-  margin-bottom: 75px;
+  margin-bottom: 40px;
   background-color: white;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
@@ -1514,6 +1514,13 @@ p.author {
 .intro .scroll-down > span {
   font-size: 75px;
   line-height: 30px;
+}
+.index-ad {
+  margin-bottom: 40px;
+}
+.inside-ad {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 #slider {
   margin-bottom: 20px;
