@@ -305,3 +305,28 @@ span[class*="typcn-social-"] {
     display: none;
   }
 }
+
+.prev-next {
+  @media (min-width: 926px) {
+    display: none;
+  }
+  margin-top: 25px;
+  p {
+    font-size: 1.1em;
+    color: @black;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    > strong {
+      color: @red;
+      font-weight: 900;
+      font-size: 1.4em;
+    }
+  }
+  > div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &:first-child {
+      border-right: 1px solid fade(@black, 30%);
+    }
+  }
+}

@@ -3,7 +3,7 @@
 {% block content %}
   {% if previous %}
     <div class="restaurant-arrow restaurant-prev">
-      <a href="../{{previous.id}}">
+      <a href="{{resourceurl}}{{previous.id}}">
         <span class="typcn typcn-chevron-left"></span>
         <p><strong>No. {{previous.position}}</strong></p>
         <p>{{previous.name}}</p>
@@ -12,7 +12,7 @@
   {% endif %}
   {% if next %}
     <div class="restaurant-arrow restaurant-next">
-      <a href="../{{next.id}}">
+      <a href="{{resourceurl}}{{next.id}}">
         <span class="typcn typcn-chevron-right"></span>
         <p><strong>No. {{next.position}}</strong></p>
         <p>{{next.name}}</p>
@@ -52,6 +52,26 @@
         {{current.review|raw}}
         <p><em>- Matthew Odam</em></p>
       </div>
+
+      <div class="row prev-next">
+        <div class="col-xs-6 text-right">
+          {% if previous %}
+            <a href="{{resourceurl}}{{previous.id}}">
+              <p><strong><span class="typcn typcn-chevron-left"></span> No. {{previous.position}}</strong></p>
+              <p>{{previous.name}}</p>
+            </a>
+          {% endif %}
+        </div>
+        <div class="col-xs-6">
+          {% if next %}
+            <a href="{{resourceurl}}{{next.id}}">
+              <p><strong>No. {{next.position}} <span class="typcn typcn-chevron-right"></span></strong></p>
+              <p>{{next.name}}</p>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
     </div>
   </div>
 

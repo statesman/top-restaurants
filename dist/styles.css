@@ -1645,3 +1645,29 @@ span[class*="typcn-social-"] {
     display: none;
   }
 }
+.prev-next {
+  margin-top: 25px;
+}
+@media (min-width: 926px) {
+  .prev-next {
+    display: none;
+  }
+}
+.prev-next p {
+  font-size: 1.1em;
+  color: #282828;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.prev-next p > strong {
+  color: #c1272c;
+  font-weight: 900;
+  font-size: 1.4em;
+}
+.prev-next > div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.prev-next > div:first-child {
+  border-right: 1px solid rgba(40, 40, 40, 0.3);
+}
