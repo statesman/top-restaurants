@@ -54,7 +54,7 @@ $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
       'debug' => $app['debug'],
       'resourceurl' => $app['urlprefix'],
       'domain' => $request->getHttpHost(),
-      'pagetitle' => $data->top[$id]->name . " review: No. " . $data->top[$id]->position . " on Matthew Odam's best Austin restaurant list",
+      'pagetitle' => $data->top[$id]->name . ": No. " . $data->top[$id]->position . " on Matthew Odam's best Austin restaurant list",
       'previous' => $prev,
       'current' => $data->top[$id],
       'next' => $next
