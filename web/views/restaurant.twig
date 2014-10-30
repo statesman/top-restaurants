@@ -87,6 +87,7 @@
 {% endblock %}
 
 {% block scripts %}
+{#
   <script>
     var markerUrl = 'http://{{domain}}{{resourceurl}}assets/markers/{{current.position}}.png';
     url = GMaps.staticMapURL({
@@ -104,4 +105,5 @@
 
     $('<img/>').attr('src', url).addClass('img-responsive').appendTo('#locator');
   </script>
+#}
 {% endblock %}

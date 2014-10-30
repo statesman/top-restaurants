@@ -28,6 +28,7 @@ $app->get($app['urlprefix'].'map/', function(Request $request) use($app) {
   ));
 });
 
+/*
 $app->get($app['urlprefix'].'2/', function(Request $request) use ($app) {
   $data = file_get_contents(__DIR__."/../data/data.json");
   $data = json_decode($data);
@@ -53,6 +54,7 @@ $app->get($app['urlprefix'].'2/', function(Request $request) use ($app) {
     'next' => $next
   ));
 });
+*/
 
 $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     $data = file_get_contents(__DIR__."/../data/data.json");
