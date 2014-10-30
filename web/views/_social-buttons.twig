@@ -1,0 +1,10 @@
+<ul class="list-inline pull-right social-share">
+  {% if current %}
+    {% set url = 'http://' ~ domain ~ resourceurl ~ current.id ~ '/' %}
+  {% else %}
+    {% set url = 'http://' ~ domain ~ resourceurl %}
+  {% endif %}
+  <li><a href="https://www.facebook.com/sharer.php?u={{url|e('url')}}" target="_blank"><span class="typcn typcn-social-facebook-circular"></span></a></li>
+  <li><a href="https://twitter.com/intent/tweet?url={{url|e('url')}}&related=austin360" target="_blank"><span class="typcn typcn-social-twitter-circular"></span></a></li>
+  <li><a href="https://plus.google.com/share?url={{url|e('url')}}" target="_blank"><span class="typcn typcn-social-google-plus-circular"></span></a></li>
+</ul>
