@@ -1433,6 +1433,14 @@ p.author {
   opacity: .9;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 767px) {
+  .hp-nav-links {
+    padding: 0;
+  }
+  .hp-nav-links > div {
+    height: 20px;
+  }
+}
 /* Mobile restaurnat list */
 .restaurant {
   margin-bottom: 20px;
@@ -1442,6 +1450,7 @@ p.author {
   font-size: 25px;
   line-height: 28px;
   margin-top: 0;
+  margin-bottom: 2px;
 }
 .restaurant .img-wrapper {
   position: relative;
@@ -1505,6 +1514,11 @@ p.author {
 }
 .intro p {
   font-size: 1.15em;
+}
+@media (max-width: 767px) {
+  .intro {
+    padding: 8px 12px;
+  }
 }
 .index-ad {
   margin-bottom: 40px;

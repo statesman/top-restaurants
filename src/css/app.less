@@ -77,6 +77,15 @@ p.author {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
+.hp-nav-links {
+  @media(max-width: 767px) {
+    padding: 0;
+    > div {
+      height: 20px;
+    }
+  }
+}
+
 /* Mobile restaurnat list */
 .restaurant {
   margin-bottom: 20px;
@@ -85,6 +94,7 @@ p.author {
     font-size: 25px;
     line-height: 28px;
     margin-top: 0;
+    margin-bottom: 2px;
   }
   .img-wrapper {
     position: relative;
@@ -153,6 +163,9 @@ p.author {
   }
   p {
     font-size: 1.15em;
+  }
+  @media(max-width: 767px) {
+    padding: 8px 12px;
   }
 }
 

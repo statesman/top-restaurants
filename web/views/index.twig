@@ -19,7 +19,7 @@
     {% include "_advertising.html" %}
   </div>
 
-  <div class="container">
+  <div class="container hp-nav-links">
     <div class="col-xs-12">
       <ul class="list-inline pull-left">
         <li><a class="page-link" href="#picks-a"><span class="typcn typcn-thumbs-up"></span> 100 picks</a></li>
@@ -29,6 +29,7 @@
     </div>
   </div>
 
+  <div id="top-25"></div>
   <div id="slider" class="clearfix hidden-xs">
     <div class="slider-carousel clearfix">
       <div class="clearfix">
@@ -55,15 +56,8 @@
 
   <div class="row hidden-sm hidden-md hidden-lg">
 
-    <div class="col-xs-12 col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          Map, filters, etc.
-        </div>
-      </div>
-    </div>
-
     <div class="col-xs-12 col-md-8">
+      <hr />
       {% for restaurant in top %}
         <div class="restaurant row">
           <a href="{{loop.index0}}">
@@ -74,6 +68,7 @@
           </a>
           <div class="col-xs-5">
             <a href="{{loop.index0}}"><h2>{{restaurant.name}}</h2></a>
+            <p>{{restaurant.shortDescription}}</p>
             <p>{{restaurant.address}}</p>
           </div>
         </div>
