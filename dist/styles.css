@@ -1506,15 +1506,6 @@ p.author {
 .intro p {
   font-size: 1.15em;
 }
-.intro .scroll-down {
-  color: #c1272c;
-  text-align: center;
-  margin-top: 75px;
-}
-.intro .scroll-down > span {
-  font-size: 75px;
-  line-height: 30px;
-}
 .index-ad {
   margin-bottom: 40px;
 }
