@@ -1499,6 +1499,17 @@ p.author {
   background-color: white;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
+.intro .credit {
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.intro .credit > strong {
+  font-size: 15px;
+}
+.intro .credit .separator {
+  padding: 0 3px;
+  color: rgba(40, 40, 40, 0.3);
+}
 .intro h1 {
   font-weight: 700;
   text-transform: uppercase;
