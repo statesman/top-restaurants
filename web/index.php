@@ -36,10 +36,16 @@ $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
       $prev = $data->top[$id - 1];
       $prev->id = $id - 1;
     }
+    else {
+      $prev = null;
+    }
 
     if($id != count($data->top) - 1) {
       $next = $data->top[$id + 1];
       $next->id = $id + 1;
+    }
+    else {
+      $next = null;
     }
 
     $data->top[$id]->id = $id;
