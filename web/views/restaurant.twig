@@ -44,6 +44,7 @@
       <p><span class="typcn typcn-link"></span> <a href="http://{{current.website}}" target="_blank">{{current.website}}</a></p>
       <hr />
       <p><span class="typcn typcn-location-outline"></span> {{current.address}}, Austin, TX {{current.zip}}</p>
+      <div id="locator"></div>
     </div>
     <div class="col-xs-12 col-sm-7 col-md-6">
       <div class="review">
@@ -76,4 +77,24 @@
   <div class="inside-ad clearfix">
     {% include "_advertising.html" %}
   </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    var markerUrl = 'http://{{domain}}{{resourceurl}}assets/markers/{{current.position}}.png';
+    url = GMaps.staticMapURL({
+      size: [350, 200],
+      lat: {{current.lat}},
+      lng: {{current.long}},
+      zoom: 14,
+      marker: {
+        address: '{{current.address}}, Austin, TX {{current.zip}}',
+        lat: {{current.lat}},
+        lng: {{current.long}},
+        icon: markerUrl
+      }
+    });
+
+    $('<img/>').attr('src', url).addClass('img-responsive').appendTo('#locator');
+  </script>
 {% endblock %}

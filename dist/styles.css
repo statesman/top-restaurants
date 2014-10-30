@@ -1601,6 +1601,10 @@ span[class*="typcn-social-"] {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.restaurant-page .contact #locator {
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
 .restaurant-page .credit {
   text-transform: uppercase;
   font-size: 10px;
