@@ -1,5 +1,16 @@
 {% extends "base.twig" %}
 
+{% block superheader %}
+<div class="container">
+  <ul class="list-inline pull-left">
+    <li><a href="{{resourceurl}}#slider"><span class="typcn typcn-th-list"></span> Top 25</a></li>
+    <li><a class="page-link" href="{{resourceurl}}#picks-a"><span class="typcn typcn-thumbs-up"></span> 100 picks</a></li>
+    <li><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></li>
+  </ul>
+  {% include "_social-buttons.twig" %}
+</div>
+{% endblock %}
+
 {% block content %}
   {% if previous %}
     <div class="restaurant-arrow restaurant-prev">
@@ -19,16 +30,6 @@
       </a>
     </div>
   {% endif %}
-  <div class="container">
-    <div class="col-xs-12">
-      <ul class="list-inline pull-left">
-        <li><a href="{{resourceurl}}#slider"><span class="typcn typcn-th-list"></span> Top 25</a></li>
-        <li><a class="page-link" href="{{resourceurl}}#picks-a"><span class="typcn typcn-thumbs-up"></span> 100 picks</a></li>
-        <li><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></li>
-      </ul>
-      {% include "_social-buttons.twig" %}
-    </div>
-  </div>
 
   <div class="row restaurant-page">
     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10">
