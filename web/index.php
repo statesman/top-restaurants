@@ -13,17 +13,21 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Igorw\Silex\ConfigServiceProvider(__DIR__.'/env.json'));
 
 // Routes ...
-$app->get($app['urlprefix'].'map/', function() use($app) {
+use Symfony\Component\HttpFoundation\Request;
+$app->get($app['urlprefix'].'map/', function(Request $request) use($app) {
   $data = file_get_contents(__DIR__."/../data/data.json");
   $data = json_decode($data);
 
   return $app['twig']->render('map.twig', array(
+    'current' => null,
     'resourceurl' => $app['urlprefix'],
-    'locations' => (array) $data->top
+    'locations' => (array) $data->top,
+    'pagetitle' => "Austin's best restaurants",
+    'domain' => $request->getHttpHost()
   ));
 });
 
-$app->get($app['urlprefix'].'{id}/', function($id) use($app) {
+$app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     $data = file_get_contents(__DIR__."/../data/data.json");
     $data = json_decode($data);
 
@@ -37,18 +41,25 @@ $app->get($app['urlprefix'].'{id}/', function($id) use($app) {
       $next->id = $id + 1;
     }
 
+    $data->top[$id]->id = $id;
+
     return $app['twig']->render('restaurant.twig', array(
       'resourceurl' => $app['urlprefix'],
+      'domain' => $request->getHttpHost(),
+      'pagetitle' => $data->top[$id]->name . " review: No. " . $data->top[$id]->position . " on Matthew Odam's best Austin restaurant list",
       'previous' => $prev,
       'current' => $data->top[$id],
       'next' => $next
     ));
 });
 
-$app->get($app['urlprefix'], function() use($app) {
+$app->get($app['urlprefix'], function(Request $request) use($app) {
     $data = file_get_contents(__DIR__."/../data/data.json");
     $data = json_decode($data);
     $data->resourceurl = $app['urlprefix'];
+    $data->pagetitle = "Austin's best restaurants";
+    $data->domain = $request->getHttpHost();
+    $data->current = null;
 
     return $app['twig']->render('index.twig', (array) $data);
 });

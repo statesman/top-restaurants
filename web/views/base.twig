@@ -4,9 +4,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>{{pagetitle}} | Austin360</title>
+    <meta name="description" content="Austin American-Statesman restaurant critic Matthew Odam's guide to the best restaurants in Austin.">
 
-    <!-- Google Webfonts -->
+    {# Facebook tags #}
+    <meta property="og:title" content="{{pagetitle}}"/>
+    <meta property="og:description" content="Austin American-Statesman restaurant critic Matthew Odam's guide to the best restaurants in Austin."/>
+    {% if current %}
+      <meta property="og:url" content="http://{{domain}}{{resourceurl}}{{current.id}}/"/>
+      <meta property="og:image" content="http://{{domain}}{{resourceurl}}assets/inside/{{current.insideImg}}"/>
+    {% else %}
+      <meta property="og:url" content="http://{{domain}}{{resourceurl}}"/>
+      <meta property="og:image" content="http://{{domain}}{{resourceurl}}assets/social-img.jpg"/>
+    {% endif %}
+
+    {# Twitter cards #}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@austin360" />
+    <meta name="twitter:title" content="{{pagetitle}}" />
+    <meta name="twitter:description" content="Austin American-Statesman restaurant critic Matthew Odam's guide to the best restaurants in Austin." />
+    {% if current %}
+      <meta property="twitter:url" content="http://{{domain}}{{resourceurl}}{{current.id}}/"/>
+      <meta property="twitter:image" content="http://{{domain}}{{resourceurl}}assets/inside/{{current.insideImg}}"/>
+    {% else %}
+      <meta property="twitter:url" content="http://{{domain}}{{resourceurl}}"/>
+      <meta property="twitter:image" content="http://{{domain}}{{resourceurl}}assets/social-img.jpg"/>
+    {% endif %}
+
+    {# Google WebFonts #}
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Titillium+Web:400,900,600,700' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
