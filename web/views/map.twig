@@ -37,7 +37,7 @@
         lng: {{location.long}},
         icon: '{{resourceurl}}assets/markers/{{location.position}}.png',
         infoWindow: {
-          content: '<h3 style="overflow:hidden;margin:0;min-width:95px;">{{location.name}}</h3>'
+          content: '<div class="google-maps-popup"><h3>{{location.name}}</h3><p>{{location.address}}</p><p><a href="{{resourceurl}}{{loop.index0}}">More info <span class="typcn typcn-chevron-right"></span></p></a></div>'
         }
       });
     {% endfor %}

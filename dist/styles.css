@@ -1676,3 +1676,13 @@ span[class*="typcn-social-"] {
 .prev-next > div:first-child {
   border-right: 1px solid rgba(40, 40, 40, 0.3);
 }
+.google-maps-popup {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.google-maps-popup > h3 {
+  margin: 0;
+}
+.google-maps-popup > p {
+  margin: 0;
+}
