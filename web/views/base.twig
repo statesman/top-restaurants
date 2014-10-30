@@ -24,11 +24,11 @@
     <meta name="twitter:title" content="{{pagetitle}}" />
     <meta name="twitter:description" content="Austin American-Statesman restaurant critic Matthew Odam's guide to the best restaurants in Austin." />
     {% if current %}
-      <meta property="twitter:url" content="http://{{domain}}{{resourceurl}}{{current.id}}/"/>
-      <meta property="twitter:image" content="http://{{domain}}{{resourceurl}}assets/inside/{{current.insideImg}}"/>
+      <meta name="twitter:url" content="http://{{domain}}{{resourceurl}}{{current.id}}/"/>
+      <meta name="twitter:image" content="http://{{domain}}{{resourceurl}}assets/inside/{{current.insideImg}}"/>
     {% else %}
-      <meta property="twitter:url" content="http://{{domain}}{{resourceurl}}"/>
-      <meta property="twitter:image" content="http://{{domain}}{{resourceurl}}assets/social-img.jpg"/>
+      <meta name="twitter:url" content="http://{{domain}}{{resourceurl}}"/>
+      <meta name="twitter:image" content="http://{{domain}}{{resourceurl}}assets/social-img.jpg"/>
     {% endif %}
 
     {# Google WebFonts #}
