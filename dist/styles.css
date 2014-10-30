@@ -1585,6 +1585,13 @@ span[class*="typcn-social-"] {
 .restaurant-page .review p:first-child {
   font-size: 1.25em;
 }
+.restaurant-page .review .review-tease {
+  padding: 10px 17px;
+  background: #f7f7f7;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
 .restaurant-page .contact {
   margin-top: 10px;
   margin-bottom: 10px;

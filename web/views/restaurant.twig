@@ -53,6 +53,9 @@
       <div class="review">
         {{current.review|raw}}
         <p><em>- Matthew Odam</em></p>
+        {% if current.reviewLink %}
+          <p class="review-tease">Read Matthew's complete review at <a href="{{current.reviewLink}}" target="_blank">{{current.reviewLink}}</a></p>
+        {% endif %}
       </div>
 
       <div class="row prev-next">
