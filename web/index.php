@@ -28,7 +28,12 @@ $app->get($app['urlprefix'].'map/', function(Request $request) use($app) {
   ));
 });
 
-/*
+// Forward Uchiko to Uchi
+$app->get($app['urlprefix'].'3/', function(Request $request) use ($app) {
+  return $app->redirect($app['urlprefix'].'2');
+});
+
+// Special Uchi/Uchiko handler that combines the two
 $app->get($app['urlprefix'].'2/', function(Request $request) use ($app) {
   $data = file_get_contents(__DIR__."/../data/data.json");
   $data = json_decode($data);
@@ -54,7 +59,6 @@ $app->get($app['urlprefix'].'2/', function(Request $request) use ($app) {
     'next' => $next
   ));
 });
-*/
 
 $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     $data = file_get_contents(__DIR__."/../data/data.json");
@@ -63,6 +67,9 @@ $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     if($id != 0) {
       $prev = $data->top[$id - 1];
       $prev->id = $id - 1;
+      if($prev->id = 3) {
+        $prev->name = "Uchi / Uchiko";
+      }
     }
     else {
       $prev = null;
@@ -71,6 +78,9 @@ $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     if($id != count($data->top) - 1) {
       $next = $data->top[$id + 1];
       $next->id = $id + 1;
+      if($next->id = 2) {
+        $next->name = "Uchi / Uchiko";
+      }
     }
     else {
       $next = null;

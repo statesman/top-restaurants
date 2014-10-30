@@ -38,26 +38,31 @@
       <p class="caption">{{uchi.insideCaption}}</p>
     </div>
     <div class="col-xs-12 col-sm-7 col-sm-offset-4 col-md-6">
-      <h2 class="name"><span class="pos">#{{uchi.position}}</span><span class="separator">:</span> {{uchi.name}} / {{uchiko.name}}</h2>
+      <h2 class="name"><span class="pos">#{{uchi.position}}</span><span class="separator">:</span> Uchi / Uchiko</h2>
       <h4 class="description">{{uchi.shortDescription}}</h4>
     </div>
 
     <div class="contact col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+      <style>
+      .uchi-header {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      </style>
+      <h5 class="uchi-header">Uchi</h5>
       <p><span class="typcn typcn-phone"></span> <a href="tel:+1{{uchi.phone}}">{{uchi.phone}}</a></p>
       <hr />
       <p><span class="typcn typcn-link"></span> <a href="http://{{uchi.website}}" target="_blank">{{uchi.website}}</a></p>
       <hr />
       <p><span class="typcn typcn-location-outline"></span> {{uchi.address}}, Austin, TX {{uchi.zip}}</p>
-      <div id="locator"></div>
-      <p class="map-tease"><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></p>
 
-      <p><span class="typcn typcn-phone"></span> <a href="tel:+1{{uchi.phone}}">{{uchi.phone}}</a></p>
+      <h5 style="margin-top:25px;" class="uchi-header">Uchiko</h5>
+      <p><span class="typcn typcn-phone"></span> <a href="tel:+1{{uchiko.phone}}">{{uchiko.phone}}</a></p>
       <hr />
-      <p><span class="typcn typcn-link"></span> <a href="http://{{uchi.website}}" target="_blank">{{uchi.website}}</a></p>
+      <p><span class="typcn typcn-link"></span> <a href="http://{{uchiko.website}}" target="_blank">{{uchiko.website}}</a></p>
       <hr />
-      <p><span class="typcn typcn-location-outline"></span> {{uchi.address}}, Austin, TX {{uchi.zip}}</p>
-      <div id="locator"></div>
-      <p class="map-tease"><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></p>
+      <p><span class="typcn typcn-location-outline"></span> {{uchiko.address}}, Austin, TX {{uchiko.zip}}</p>
     </div>
 
     <div class="col-xs-12 col-sm-7 col-md-6">
@@ -91,24 +96,4 @@
   <div class="inside-ad clearfix">
     {% include "_advertising.html" %}
   </div>
-{% endblock %}
-
-{% block scripts %}
-  <script>
-    var markerUrl = 'http://{{domain}}{{resourceurl}}assets/markers/{{uchi.position}}.png';
-    url = GMaps.staticMapURL({
-      size: [350, 200],
-      lat: {{current.lat}},
-      lng: {{current.long}},
-      zoom: 14,
-      marker: {
-        address: '{{uchi.address}}, Austin, TX {{uchi.zip}}',
-        lat: {{current.lat}},
-        lng: {{current.long}},
-        icon: markerUrl
-      }
-    });
-
-    $('<img/>').attr('src', url).addClass('img-responsive').appendTo('#locator');
-  </script>
 {% endblock %}
