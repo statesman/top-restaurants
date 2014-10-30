@@ -5,8 +5,8 @@
     <div class="intro col-xs-12">
       <h1>2014 Austin Dining Guide</h1>
       <h2>Matthew Odam's Top 25 restaurants</h2>
-      <p>With my third annual dining guide, I limited my top restaurants list to 25, down from 50.</p>
-      <p>In previous years, the gap between 40 and 60 was negligible, and I wanted a tighter, more competitive list. (In order to share some of my other favorites, I created an additional roster of <a href="#picks">100 places I like to eat</a>).</p>
+      <p>With my third annual dining guide, I limited my <a class="page-link" href="#slider">top restaurants list</a> to 25, down from 50.</p>
+      <p>In previous years, the gap between 40 and 60 was negligible, and I wanted a tighter, more competitive list. (In order to share some of my other favorites, I created an additional roster of <a class="page-link" href="#picks-a">100 places I like to eat</a>).</p>
       <p>As in years past, I looked for a group of restaurants that serve as a snapshot of Austin's vibrant dining scene. These aren’t necessarily the most expensive restaurants, but it is a dynamic group of places I believe matter the most right now. I visited each place on the list (and many others) at least once in the past year.</p>
       <p>In order to be eligible for inclusion, restaurants had to be open before Aug. 1. That means intriguing newcomers like Olamaie and Dai Due will have to wait until next year to be considered. This is a list of traditional restaurants. Trailers, such as my top-ranking barbecue spot, La Barbecue, get their due in the list of the additional 100.</p>
       <p>I only selected restaurants with locations in Austin, so favorites like Leaning Pear in Wimberley and Taste of Ethiopia in Pflugerville did not get considered.</p>
@@ -22,6 +22,7 @@
   <div class="container">
     <div class="col-xs-12">
       <ul class="list-inline pull-left">
+        <li><a class="page-link" href="#picks-a"><span class="typcn typcn-th-list"></span> Critic's picks</a></li>
         <li><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></li>
       </ul>
       {% include "_social-buttons.twig" %}
@@ -86,7 +87,7 @@
 
   {# Also rans #}
 
-  <h2>Critic’s picks: 100 more places Matthew Odam likes to eat</h2>
+  <h2 id="picks-a">Critic’s picks: 100 more places Matthew Odam likes to eat</h2>
   <p>This list of 100 places shouldn’t be considered numbers 26-125 in the Dining Guide. They represent a broad sampling of various cuisines. They’re places where I simply enjoy eating. Consider it something of a cheat-sheet for your dining needs when that age-old question (“Where should we eat?”) pops up. <em>- Matthew Odam</em></p>
 
   <div id="picks" class="row">
@@ -119,11 +120,20 @@
 {% block scripts %}
   <script>
   $(function() {
+    // Setup Masonry
     var $container = $('#picks');
-    // initialize
     $container.masonry({
       itemSelector: '.pick'
     });
+
+    // Animated page scroll
+    $('.page-link').click(function(e) {
+      e.preventDefault();
+      var target = $($(this).attr('href'));
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 750);
+    })
   });
   </script>
 {% endblock %}
