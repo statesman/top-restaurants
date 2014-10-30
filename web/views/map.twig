@@ -1,8 +1,7 @@
 {% extends "base.twig" %}
 
-{% block content %}
-</div>
-  <div class="container">
+{% block superheader %}
+  <div class="container map-nav">
     <div class="col-xs-12">
       <ul class="list-inline pull-left">
         <li><a href="{{resourceurl}}"><span class="typcn typcn-th-list"></span> List view</a></li>
@@ -11,19 +10,12 @@
     </div>
   </div>
 
-  <div id="map" style="width:100%;height: 500px;"></div>
-<div class="container">
+  <div id="map" style="width:100%;height: auto;margin-bottom: 10px;"></div>
 {% endblock %}
 
 {% block scripts %}
   <script>
   $(function() {
-    var headerHeight = $('.header').outerHeight();
-    var winHeight = $(window).height();
-    $('#map').height(winHeight - headerHeight - 50);
-  });
-  </script>
-  <script>
     var map = new GMaps({
       div: '#map',
       lat: 30.2500,
@@ -42,6 +34,19 @@
       });
     {% endfor %}
     map.addMarkers(markers);
-    map.fitZoom();
+
+    var fitMap = function() {
+      var winHeight = $(window).outerHeight(),
+          navHeight = $('.map-nav').outerHeight(),
+          legalHeight = $('.legal').outerHeight();
+      $('#map').height(winHeight - navHeight - legalHeight - 20);
+      map.fitZoom();
+    };
+    fitMap();
+
+    // Debounced window resize function from https://github.com/louisremi/jquery-smartresize#minimalist-standalone-version
+    function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)};return c};
+    on_resize(fitMap);
+  });
   </script>
 {% endblock %}
