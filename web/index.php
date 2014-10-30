@@ -28,6 +28,32 @@ $app->get($app['urlprefix'].'map/', function(Request $request) use($app) {
   ));
 });
 
+$app->get($app['urlprefix'].'2/', function(Request $request) use ($app) {
+  $data = file_get_contents(__DIR__."/../data/data.json");
+  $data = json_decode($data);
+
+  $prev = $data->top[1];
+  $prev->id = 1;
+  $next = $data->top[4];
+  $next->id = 4;
+
+  $uchi = $data->top[2];
+  $uchi->id = 2;
+  $uchiko = $data->top[3];
+
+  return $app['twig']->render('uchis.twig', array(
+    'debug' => $app['debug'],
+    'resourceurl' => $app['urlprefix'],
+    'domain' => $request->getHttpHost(),
+    'pagetitle' => "Uchi / Uchiko: No. 3 on Matthew Odam's best Austin restaurant list",
+    'previous' => $prev,
+    'current' => $uchi,
+    'uchi' => $uchi,
+    'uchiko' => $uchiko,
+    'next' => $next
+  ));
+});
+
 $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     $data = file_get_contents(__DIR__."/../data/data.json");
     $data = json_decode($data);

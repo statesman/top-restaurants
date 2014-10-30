@@ -1,0 +1,114 @@
+{% extends "base.twig" %}
+
+{% block superheader %}
+<div class="container">
+  <ul class="list-inline pull-left">
+    <li><a href="{{resourceurl}}#top-25"><span class="typcn typcn-th-list"></span> Top 25</a></li>
+    <li><a class="page-link" href="{{resourceurl}}#picks-a"><span class="typcn typcn-thumbs-up"></span> 100 picks</a></li>
+    <li><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></li>
+  </ul>
+  {% include "_social-buttons.twig" %}
+</div>
+{% endblock %}
+
+{% block content %}
+  {% if previous %}
+    <div class="restaurant-arrow restaurant-prev">
+      <a href="{{resourceurl}}{{previous.id}}">
+        <span class="typcn typcn-chevron-left"></span>
+        <p><strong>No. {{previous.position}}</strong></p>
+        <p>{{previous.name}}</p>
+      </a>
+    </div>
+  {% endif %}
+  {% if next %}
+    <div class="restaurant-arrow restaurant-next">
+      <a href="{{resourceurl}}{{next.id}}">
+        <span class="typcn typcn-chevron-right"></span>
+        <p><strong>No. {{next.position}}</strong></p>
+        <p>{{next.name}}</p>
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="row restaurant-page">
+    <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10">
+      <img class="img-responsive" src="{{resourceurl}}assets/inside/{{uchi.insideImg}}" />
+      <p class="credit text-right">{{uchi.insideCredit}}</p>
+      <p class="caption">{{uchi.insideCaption}}</p>
+    </div>
+    <div class="col-xs-12 col-sm-7 col-sm-offset-4 col-md-6">
+      <h2 class="name"><span class="pos">#{{uchi.position}}</span><span class="separator">:</span> {{uchi.name}} / {{uchiko.name}}</h2>
+      <h4 class="description">{{uchi.shortDescription}}</h4>
+    </div>
+
+    <div class="contact col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+      <p><span class="typcn typcn-phone"></span> <a href="tel:+1{{uchi.phone}}">{{uchi.phone}}</a></p>
+      <hr />
+      <p><span class="typcn typcn-link"></span> <a href="http://{{uchi.website}}" target="_blank">{{uchi.website}}</a></p>
+      <hr />
+      <p><span class="typcn typcn-location-outline"></span> {{uchi.address}}, Austin, TX {{uchi.zip}}</p>
+      <div id="locator"></div>
+      <p class="map-tease"><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></p>
+
+      <p><span class="typcn typcn-phone"></span> <a href="tel:+1{{uchi.phone}}">{{uchi.phone}}</a></p>
+      <hr />
+      <p><span class="typcn typcn-link"></span> <a href="http://{{uchi.website}}" target="_blank">{{uchi.website}}</a></p>
+      <hr />
+      <p><span class="typcn typcn-location-outline"></span> {{uchi.address}}, Austin, TX {{uchi.zip}}</p>
+      <div id="locator"></div>
+      <p class="map-tease"><a href="{{resourceurl}}map"><span class="typcn typcn-map"></span> Map view</a></p>
+    </div>
+
+    <div class="col-xs-12 col-sm-7 col-md-6">
+      <div class="review">
+        {{uchi.review|raw}}
+        <p><em>- Matthew Odam</em></p>
+      </div>
+
+      <div class="row prev-next">
+        <div class="col-xs-6 text-right">
+          {% if previous %}
+            <a href="{{resourceurl}}{{previous.id}}">
+              <p><strong><span class="typcn typcn-chevron-left"></span> No. {{previous.position}}</strong></p>
+              <p>{{previous.name}}</p>
+            </a>
+          {% endif %}
+        </div>
+        <div class="col-xs-6">
+          {% if next %}
+            <a href="{{resourceurl}}{{next.id}}">
+              <p><strong>No. {{next.position}} <span class="typcn typcn-chevron-right"></span></strong></p>
+              <p>{{next.name}}</p>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="inside-ad clearfix">
+    {% include "_advertising.html" %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    var markerUrl = 'http://{{domain}}{{resourceurl}}assets/markers/{{uchi.position}}.png';
+    url = GMaps.staticMapURL({
+      size: [350, 200],
+      lat: {{current.lat}},
+      lng: {{current.long}},
+      zoom: 14,
+      marker: {
+        address: '{{uchi.address}}, Austin, TX {{uchi.zip}}',
+        lat: {{current.lat}},
+        lng: {{current.long}},
+        icon: markerUrl
+      }
+    });
+
+    $('<img/>').attr('src', url).addClass('img-responsive').appendTo('#locator');
+  </script>
+{% endblock %}
