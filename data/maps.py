@@ -24,4 +24,3 @@ for i, restaurant in enumerate(j['top']):
       with open(path, 'wb') as f:
           for chunk in r.iter_content():
               f.write(chunk)
-              
