@@ -225,7 +225,7 @@ span[class*="typcn-social-"] {
   h2.name {
     font-size: 3.5em;
     line-height: 1em;
-    margin-bottom: 18px;
+    margin-bottom: 0;
     font-weight: 900;
     .pos {
       font-weight: 600;
@@ -236,11 +236,12 @@ span[class*="typcn-social-"] {
       font-weight: 400;
     }
   }
+  h4.description {
+    font-family: @sans-serif-2;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
   .review {
-    //TODO: media query to only do this for small and up
-    p:first-child {
-      font-size: 1.25em;
-    }
     font-size: 1.05em;
     .review-tease {
       padding: 10px 17px;

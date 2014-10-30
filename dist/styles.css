@@ -1568,7 +1568,7 @@ span[class*="typcn-social-"] {
 .restaurant-page h2.name {
   font-size: 3.5em;
   line-height: 1em;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   font-weight: 900;
 }
 .restaurant-page h2.name .pos {
@@ -1579,11 +1579,13 @@ span[class*="typcn-social-"] {
   color: rgba(40, 40, 40, 0.2);
   font-weight: 400;
 }
+.restaurant-page h4.description {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 .restaurant-page .review {
   font-size: 1.05em;
-}
-.restaurant-page .review p:first-child {
-  font-size: 1.25em;
 }
 .restaurant-page .review .review-tease {
   padding: 10px 17px;
