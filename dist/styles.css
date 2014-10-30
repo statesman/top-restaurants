@@ -1646,7 +1646,7 @@ span[class*="typcn-social-"] {
 .restaurant-arrow:hover a {
   text-decoration: none;
 }
-@media (max-width: 925px) {
+@media (max-width: 1150px) {
   .restaurant-arrow {
     display: none;
   }
@@ -1654,7 +1654,7 @@ span[class*="typcn-social-"] {
 .prev-next {
   margin-top: 25px;
 }
-@media (min-width: 926px) {
+@media (min-width: 1150px) {
   .prev-next {
     display: none;
   }
@@ -1675,7 +1675,11 @@ span[class*="typcn-social-"] {
   padding-bottom: 15px;
 }
 .prev-next > div:first-child {
-  border-right: 1px solid rgba(40, 40, 40, 0.3);
+  border-right: 1px solid #dadada;
+}
+.prev-next > div:nth-child(2) {
+  margin-left: -1px;
+  border-left: 1px solid #dadada;
 }
 .google-maps-popup {
   overflow: hidden;

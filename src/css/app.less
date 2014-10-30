@@ -307,13 +307,13 @@ span[class*="typcn-social-"] {
       text-decoration: none;
     }
   }
-  @media (max-width: 925px) {
+  @media (max-width: 1150px) {
     display: none;
   }
 }
 
 .prev-next {
-  @media (min-width: 926px) {
+  @media (min-width: 1150px) {
     display: none;
   }
   margin-top: 25px;
@@ -332,7 +332,11 @@ span[class*="typcn-social-"] {
     padding-top: 15px;
     padding-bottom: 15px;
     &:first-child {
-      border-right: 1px solid fade(@black, 30%);
+      border-right: 1px solid lighten(@black, 70%);
+    }
+    &:nth-child(2) {
+      margin-left: -1px;
+      border-left: 1px solid lighten(@black, 70%);
     }
   }
 }
