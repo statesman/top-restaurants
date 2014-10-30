@@ -67,7 +67,7 @@ $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     if($id != 0) {
       $prev = $data->top[$id - 1];
       $prev->id = $id - 1;
-      if($prev->id = 3) {
+      if($prev->id == 3) {
         $prev->name = "Uchi / Uchiko";
       }
     }
