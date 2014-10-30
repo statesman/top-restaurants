@@ -11,9 +11,11 @@
     </div>
   </div>
 
-  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script src="{{resourceurl}}bower_components/gmaps/gmaps.js"></script>
   <div id="map" style="width:100%;height: 500px;"></div>
+<div class="container">
+{% endblock %}
+
+{% block scripts %}
   <script>
   $(function() {
     var headerHeight = $('.header').outerHeight();
@@ -42,5 +44,4 @@
     map.addMarkers(markers);
     map.fitZoom();
   </script>
-<div class="container">
 {% endblock %}

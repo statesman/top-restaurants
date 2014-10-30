@@ -17,6 +17,7 @@
   "dependencies": {
     "typicons": "~2.0.6",
     "masonry": "~3.1.5",
-    "gmaps": "~0.4.15"
+    "gmaps": "~0.4.15",
+    "bootstrap": "~3.3.0"
   }
 }

@@ -48,9 +48,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
     {% include "_headjs.html" %}
 
   </head>
@@ -66,19 +63,9 @@
       {% block content %}{% endblock %}
     </div><!-- /.container -->
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-    <script src="{{resourceurl}}bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-    <script>
-    $(function() {
-      var $container = $('#picks');
-      // initialize
-      $container.masonry({
-        itemSelector: '.pick'
-      });
-    });
-    </script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="{{resourceurl}}dist/scripts.js"></script>
+    {% block scripts %}{% endblock scripts %}
 
     <script src="//localhost:35729/livereload.js"></script>
 

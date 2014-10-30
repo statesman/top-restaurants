@@ -17,6 +17,22 @@ module.exports = function(grunt) {
       }
     },
 
+    // Uglify, concatenate JavaScript
+    uglify: {
+      options: {
+        sourceMap: true
+      },
+      js: {
+        files: {
+          "dist/scripts.js": [
+            'bower_components/gmaps/gmaps.js',
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/masonry/dist/masonry.pkgd.js'
+          ]
+        }
+      }
+    },
+
     copy: {
       typicons: {
         files: [
@@ -51,5 +67,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
 };

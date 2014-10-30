@@ -118,3 +118,15 @@
   {# / Also rans #}
 
 {% endblock %}
+
+{% block scripts %}
+  <script>
+  $(function() {
+    var $container = $('#picks');
+    // initialize
+    $container.masonry({
+      itemSelector: '.pick'
+    });
+  });
+  </script>
+{% endblock %}
