@@ -78,7 +78,7 @@ $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     if($id != count($data->top) - 1) {
       $next = $data->top[$id + 1];
       $next->id = $id + 1;
-      if($next->id = 2) {
+      if($next->id == 2) {
         $next->name = "Uchi / Uchiko";
       }
     }
