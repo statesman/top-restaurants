@@ -19,6 +19,7 @@ $app->get($app['urlprefix'].'map/', function(Request $request) use($app) {
   $data = json_decode($data);
 
   return $app['twig']->render('map.twig', array(
+    'debug' => $app['debug'],
     'current' => null,
     'resourceurl' => $app['urlprefix'],
     'locations' => (array) $data->top,
@@ -44,6 +45,7 @@ $app->get($app['urlprefix'].'{id}/', function(Request $request, $id) use($app) {
     $data->top[$id]->id = $id;
 
     return $app['twig']->render('restaurant.twig', array(
+      'debug' => $app['debug'],
       'resourceurl' => $app['urlprefix'],
       'domain' => $request->getHttpHost(),
       'pagetitle' => $data->top[$id]->name . " review: No. " . $data->top[$id]->position . " on Matthew Odam's best Austin restaurant list",
@@ -60,6 +62,7 @@ $app->get($app['urlprefix'], function(Request $request) use($app) {
     $data->pagetitle = "Austin's best restaurants";
     $data->domain = $request->getHttpHost();
     $data->current = null;
+    $data->debug = $app['debug'];
 
     return $app['twig']->render('index.twig', (array) $data);
 });
