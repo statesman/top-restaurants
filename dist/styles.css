@@ -1535,8 +1535,7 @@ p.author {
   margin-bottom: 40px;
 }
 .inside-ad {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin: 25px -15px;
 }
 #slider {
   margin-bottom: 20px;
